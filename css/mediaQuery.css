@@ -1,0 +1,133 @@
+html {
+    font-size: 62.5%
+}
+
+
+/* Big Tablets and Above: 769px to 1200px */ 
+@media (max-width: 1200px) {
+    .timeline {
+        width: 100%;
+    }
+}
+
+
+/* Small Tablets to Big Tablets: 768px to 1023px */ 
+@media (max-width: 1023px) {
+    
+}
+
+
+
+/* Small Phones to Small Tablets: 481px to 767px */ 
+@media (max-width: 767px) {
+
+    .span-1-of-4 {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+
+    .span-3-of-4 {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav {
+        visibility: hidden;
+    }
+
+    .row {
+        padding: 0 2rem;
+    }
+
+    .profile-img {
+        height: 20rem;
+    }
+
+    .about-text {
+        margin: 0 auto;
+        font-size: 1.7rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
+        line-height: 3rem;
+        word-spacing: 0.4rem;
+        padding: 0;
+    }
+
+    .timeline {
+        width: 100% !important;
+        padding-bottom: 0!important;
+    }
+    .timeline::before {
+        left: 2rem !important;
+    }
+    .timeline li:nth-child(odd),
+    .timeline li:nth-child(even) {
+        width: 100% !important;
+        text-align: left !important;
+        padding-left: 5rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .timeline li:nth-child(4) {
+        padding-bottom: 0 !important;
+    }
+
+    .timeline h3 {
+        margin-top: 3rem !important;
+    }
+    .timeline li:nth-child(odd)::before,
+    .timeline li:nth-child(even)::before {
+        top: 1rem !important;
+        left: 1.5rem  !important;
+        right: inherit  !important;
+    }
+    .timeline li:nth-child(odd) .time,
+    .timeline li:nth-child(even) .time {
+        top: 0 !important;
+        left: 5rem !important;
+        right: inherit !important;
+    }
+}
+
+@media (max-width: 580px) {
+    .text-box-sub {
+        font-family: "Lato", sans-serif;
+        letter-spacing: 1rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+        animation: moveInUp 0.5s ease-in 0.5s backwards;
+    }
+    .skill-list {
+        display: block
+    }
+}
+
+/* Small Phones: 0 to 480px */ 
+@media (max-width: 480px) {
+    .text-box-sub {
+        font-family: "Lato", sans-serif;
+        letter-spacing: 1rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        font-style: italic;
+        animation: moveInUp 0.5s ease-in 0.5s backwards;
+    }
+    .about-text {
+        font-size: 1.5rem;
+    }
+    .text-justify {
+        padding: 2rem;
+    }
+    .profile-img {
+        height: 20rem;
+    }
+    .tech-imgs {
+        display: inline;
+        height: 20rem;
+        padding: 2rem;
+    }
+    .skill-category {
+        padding: 4rem 2rem;
+        margin: 2rem 0rem;
+    }
+}
