@@ -226,6 +226,9 @@ html {
     }
     .tech-imgs-block ul li {
         display: inline-block;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
+    }
+    .tech-imgs {
+        height: 5rem;
     }
 }

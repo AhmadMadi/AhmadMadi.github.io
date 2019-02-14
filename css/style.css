@@ -346,7 +346,7 @@ ul {
 /* ---------------------------------------------- */
 
 .about {
-    background-color: #0f0f0f;
+    background-color: #0c0c0c;
     color: #dfe6e9;
     position: relative;
 }
@@ -522,7 +522,7 @@ ul {
 /* ---------------------------------------------- */
 
 .skills {
-    background-color: #0f0f0f;
+    background-color: #0c0c0c;
     color: #dfe6e9;
     position: relative;
 }
@@ -718,6 +718,7 @@ ul {
 }
 
 .contactme p {
+    text-align: center;
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 0.2rem;
@@ -726,7 +727,7 @@ ul {
 .contactme li {
     width: 100%;
     margin-bottom: 4rem;
-    background-color: #0f0f0f;
+    background-color: #0c0c0c;
     padding: 2rem 5rem;
     text-align: center;
 }
