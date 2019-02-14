@@ -35,11 +35,11 @@ body {
 @keyframes moveInDown {
     0% {
         opacity: 0;
-        transform: translate(-50%, -1rem);
+        transform: translateY(-1rem);
     }
     100% {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform: translateY(0);
     }
 }
 
@@ -68,7 +68,30 @@ body {
     }
 }
 
+@keyframes swipe {
+    0% {
+        opacity: 0.2;
+        top: 75%;
+    }
+    25% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 25%;
+    }
+}
+
 @keyframes mouseDelay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes swipeDelay {
     0% {
         opacity: 0;
     }
@@ -203,11 +226,11 @@ ul {
 }
 
 .text-box {
-    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
     z-index: 2;
 }
 
@@ -223,6 +246,7 @@ ul {
     font-size: 15rem;
     font-weight: 900;
     cursor: pointer;
+    margin-bottom: 5rem;
     animation: moveInDown 0.5s ease-in;
 }
 
@@ -283,6 +307,39 @@ ul {
     animation: mouse 2s infinite;
 }
 
+.middle-swipe {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: 2;
+    animation: swipeDelay 0.5s ease-in 1s backwards;
+    visibility: hidden;
+}
+
+.swipe {
+    width: 1rem;
+    height: 10rem;
+    border-radius: 50%;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.swipe::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #dfe6e9;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: swipe 1.7s infinite;
+}
+
 
 /* ---------------------------------------------- */
 /* ABOUT */
@@ -297,7 +354,6 @@ ul {
 .profile-img {
     height: 15rem;
     border-radius: 50%;
-    margin: 0 auto;
     display: block;
 }
 
@@ -315,8 +371,12 @@ ul {
     margin-top: 4rem;
 }
 
-.tech-imgs {
+.tech-imgs-block ul li {
     display: inline-block;
+    padding: 0 3rem;
+}
+
+.tech-imgs {
     height: 8rem;
 }
 

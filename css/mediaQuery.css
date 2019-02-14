@@ -2,56 +2,78 @@ html {
     font-size: 62.5%
 }
 
-
-/* Big Tablets and Above: 769px to 1200px */ 
+/* Big Tablets and Above: 1024px to 1200px */ 
 @media (max-width: 1200px) {
     .timeline {
         width: 100%;
+    }
+    .text-box-primary {
+        font-size: 12rem;
     }
 }
 
 
 /* Small Tablets to Big Tablets: 768px to 1023px */ 
 @media (max-width: 1023px) {
-    
+    .mainnav ul li {
+        padding: 1.5rem 2rem;
+        margin-left: 1rem;
+        display: inline-block;
+        visibility: hidden;
+    }
+    .text-box-primary {
+        font-size: 12rem;
+    }
+    .text-box-primary:hover .hidden {
+        opacity: 0;
+        max-width: 0rem;
+    }
+    .text-box-sub {
+        font-size: 1.6rem;
+        letter-spacing: 1rem;
+        font-weight: 400;
+    }
+    .middle-mouse {
+        visibility: hidden;
+    }
+    .middle-swipe {
+        visibility: visible;
+    }
+    .about .row {
+        padding: 0 1rem;
+    }
+    .tech-imgs-block ul li {
+        display: inline-block;
+        padding: 0 2.5rem;
+    }
+
 }
 
 
 
 /* Small Phones to Small Tablets: 481px to 767px */ 
 @media (max-width: 767px) {
-
-    .span-1-of-4 {
-        width: 100%;
-        margin: 0 0 2rem 0;
-    }
-    .span-3-of-4 {
-        width: 100%;
-        margin: 0;
-    }
-
     nav {
         visibility: hidden;
     }
-
-    .row {
+    .about .row {
         padding: 0 2rem;
     }
-
-    .profile-img {
-        height: 20rem;
+    .tech-imgs-block ul li {
+        display: inline-block;
+        padding: 0 1.5rem;
     }
-
-    .about-text {
-        margin: 0 auto;
+    .text-box-sub {
         font-size: 1.7rem;
+        letter-spacing: 0.5rem;
         font-weight: 400;
-        letter-spacing: 0.2rem;
-        line-height: 3rem;
-        word-spacing: 0.4rem;
-        padding: 0;
     }
-
+    .middle-mouse {
+        visibility: hidden;
+    }
+    .middle-swipe {
+        visibility: visible;
+    }
     .timeline {
         width: 100% !important;
         padding-bottom: 0!important;
@@ -72,6 +94,7 @@ html {
 
     .timeline h3 {
         margin-top: 3rem !important;
+        font-size: 1.8rem;
     }
     .timeline li:nth-child(odd)::before,
     .timeline li:nth-child(even)::before {
@@ -85,61 +108,75 @@ html {
         left: 5rem !important;
         right: inherit !important;
     }
+    .note {
+        color: #dfe6e9;
+        text-align: center;
+        padding-top: 5rem;
+        font-style: italic;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
 }
 
-@media (max-width: 580px) {
-    .text-box-sub {
-        font-family: "Lato", sans-serif;
-        letter-spacing: 1rem;
-        font-size: 1.5rem;
-        font-weight: 300;
-        font-style: italic;
-        animation: moveInUp 0.5s ease-in 0.5s backwards;
-    }
-    .skill-list {
-        display: block
-    }
-}
 
 /* Small Phones: 0 to 480px */ 
 @media (max-width: 480px) {
-    .text-box-sub {
-        font-family: "Lato", sans-serif;
-        letter-spacing: 1rem;
-        font-size: 1.4rem;
-        font-weight: 300;
-        font-style: italic;
-        animation: moveInUp 0.5s ease-in 0.5s backwards;
-    }
-
     section {
-        padding: 4rem 0;
+        padding: 5rem 0;
+    }
+    .text-box-primary{
+        cursor: default;
     }
 
+    .text-box-sub {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        font-weight: 400;
+    }
+
+    .text-box-primary:hover .hidden {
+        opacity: 0;
+        max-width: 0rem;
+    }
     .middle-mouse {
         visibility: hidden;
     }
-
-    .sub {
-        font-size: 1rem;
-        letter-spacing: 0.5rem;
-    }
-    .about-text {
-        font-size: 1.5rem;
-    }
-    .text-justify {
-        padding: 2rem;
+    .middle-swipe {
+        visibility: visible;
     }
     .profile-img {
-        height: 20rem;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+    .about-text {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.3rem;
+    }
+    
+    .tech-imgs-block ul li {
+        display: inline-block;
+        padding: 0 1.5rem;
     }
     .tech-imgs {
-        display: inline;
-        height: 20rem;
-        padding: 2rem;
+        height: 6rem;
     }
+    .skills .row-skills {
+        padding: 0 2rem;
+    }
+
     .skill-category {
-        padding: 4rem 2rem;
-        margin: 2rem 0rem;
+        margin-bottom: 2rem;
+    }
+    .skill-category:nth-child(4) {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 415px) {
+    .contactme p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.2rem;
     }
 }
