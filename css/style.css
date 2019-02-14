@@ -744,7 +744,15 @@ ul {
     line-height: 2rem;
 }
 
-.fb,
+.contact-icons a {
+    text-decoration: none;
+}
+
+.contact-icons ul {
+    list-style: none;
+}
+
+.git,
 .linkedin {
     transition: 0.3s;
     color: #dfe6e9;
@@ -753,27 +761,8 @@ ul {
     background-color: none;
 }
 
-.fb::after,
-.linkedin::after {
-    content: "";
-    position: absolute;
-    color: #dfe6e9;
-    background-color: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.3s;
-    z-index: -1;
-}
-
-.fb.hover::after,
-.linkedin.hover::after {
-    background-color: #dfe6e9;
-}
-
-.fb:hover {
-    color: #3B579D;
+.git:hover {
+    color: #fff;
     cursor: pointer;
 }
 
