@@ -138,6 +138,9 @@ html {
 }
 
 @media (max-width: 490px) {
+    .home {
+        height: 95vh;
+    }
     .tech-imgs-block ul li {
         display: inline-block;
         padding: 0 1.3rem;
@@ -152,9 +155,6 @@ html {
 
 /* Small Phones: 0 to 480px */ 
 @media (max-width: 480px) {
-    header {
-        height: 95vh;
-    }
     section {
         padding: 5rem 0;
     }
