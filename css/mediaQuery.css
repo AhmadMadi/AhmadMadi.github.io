@@ -124,6 +124,7 @@ html {
     }
     .span-3-of-4 {
         width: 100%;
+        margin: 0;
     }
     .profile-img {
         margin: 0 auto;
@@ -133,6 +134,13 @@ html {
         font-size: 2rem;
         letter-spacing: 0.1rem;
         word-spacing: 0.3rem;
+    }
+}
+
+@media (max-width: 490px) {
+    .tech-imgs-block ul li {
+        display: inline-block;
+        padding: 0 1.3rem;
     }
 }
 
@@ -212,6 +220,6 @@ html {
     }
     .tech-imgs-block ul li {
         display: inline-block;
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 }
