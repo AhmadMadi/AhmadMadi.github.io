@@ -18,6 +18,7 @@ Text-Light" #dfe6e9;
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -137,7 +138,7 @@ section {
 }
 
 .text-justify {
-    text-align: justify;
+    text-align: left;
 }
 
 .row-skills {
