@@ -58,14 +58,14 @@ body {
 @keyframes mouse {
     0% {
         opacity: 0.3;
-        top: 25%;
+        top: 20%;
     }
     25% {
         opacity: 1;
     }
     100% {
         opacity: 0;
-        top: 75%;
+        top: 50%;
     }
 }
 
@@ -110,6 +110,18 @@ body {
     }
     100%{
         box-shadow: 0 0 0 0 rgba(221, 229, 232, 0.2);
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -567,7 +579,7 @@ ul {
 }
 
 .skill {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .all-skills {
@@ -580,133 +592,34 @@ ul {
 
 .skill-list li h3 {
     font-size: 1.5rem;
-    padding-bottom: 1rem;
 }
 
-.skill-list .all-skills::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
+.skill-list .html {
+    color:  #F16529;
 }
 
-.skill-list .html-skill {
-    border: 0.1rem solid #F16529;
+.skill-list .css {
+    color: #264DE4;
 }
 
-.skill-list .html-skill::after {
-    background-color: #F16529;
-    width: 80%;
+.skill-list .js {
+    color:  #F0DB4F;
 }
 
-.skill-list .css-skill {
-    border: 0.1rem solid #264DE4;
+.skill-list .sass {
+    color:  #CD6799;
 }
 
-.skill-list .css-skill::after {
-    background-color: #264DE4;
-    width: 70%;
+.skill-list .php {
+    color:  #878DBA;
 }
 
-.skill-list .js-skill {
-    border: 0.1rem solid #F0DB4F;
+.skill-list .mysql {
+    color:  #E26D00;
 }
 
-.skill-list .js-skill::after {
-    background-color: #F0DB4F;
-    width: 50%;
-}
-
-.skill-list .sass-skill {
-    border: 0.1rem solid #CD6799;
-}
-
-.skill-list .sass-skill::after {
-    background-color: #CD6799;
-    width: 70%;
-}
-
-.skill-list .php-skill {
-    border: 0.1rem solid #878DBA;
-}
-
-.skill-list .php-skill::after {
-    background-color: #878DBA;
-    width: 45%;
-}
-
-.skill-list .sql-skill {
-    border: 0.1rem solid #E26D00;
-}
-
-.skill-list .sql-skill::after {
-    background-color: #E26D00;
-    width: 45%;
-}
-
-.skill-list .arabic-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .arabic-skill::after {
-    background-color: #0984e3;
-    width: 90%;
-}
-
-.skill-list .english-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .english-skill::after {
-    background-color: #0984e3;
-    width: 80%;
-}
-
-.skill-list .french-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .french-skill::after {
-    background-color: #0984e3;
-    width: 10%;
-}
-
-.skill-list .japanese-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .japanese-skill::after {
-    background-color: #0984e3;
-    width: 15%;
-}
-
-.skill-list .photog-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .photog-skill::after {
-    background-color: #0984e3;
-    width: 55%;
-}
-
-.skill-list .vgames-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .vgames-skill::after {
-    background-color: #0984e3;
-    width: 85%;
-}
-
-.skill-list .pc-skill {
-    border: 0.1rem solid #0984e3;
-}
-
-.skill-list .pc-skill::after {
-    background-color: #0984e3;
-    width: 80%;
+.skill-list .other__skill {
+    color: #0984e3;
 }
 
 .note {
@@ -807,4 +720,57 @@ footer p {
     font-size: 1.2rem;
     text-align: center;
     padding-top: 1rem;
+}
+
+/* ---------------------------------------------- */
+/* PRELOAD */
+/* ---------------------------------------------- */
+
+.preload {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.middle-anim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20rem;
+    transform: translate(-50%, -50%);
+    display: table;
+    caption-side: bottom;
+    text-align: center;
+}
+
+.circle {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+    display: flex;
+}
+
+.color1, .color2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0984e3;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: loading 2s infinite ease-in-out;
+}
+.color2 {
+    animation-delay: -1s;
+}
+
+.loading-text {
+    position: relative;
+    font-size: 1.5rem;
+    color: #dfe6e9;
+    text-transform: uppercase;
+    display: table-caption;
+    margin-top: 5rem;
 }
